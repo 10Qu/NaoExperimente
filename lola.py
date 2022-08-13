@@ -210,7 +210,7 @@ def rotate_ears():
   ear_data[1] = 1.0
 
   current_time = int(time.time())
-  if current_time % 3 == 0:
+  if current_time % 10 == 0:
     return ear_data[-1:] + ear_data[:-1]
 
   return ear_data
@@ -260,9 +260,9 @@ def main ():
       #robot.command( "Position" , "HeadPitch" , head_pitch)
 
 
-      robot.commands[ 'LEye' ] = ()
-      robot.commands[ 'REye' ] = () 
-      robot.commands[ 'REar' ] = set_blue_ears()
+      robot.commands[ 'LEye' ] = (set_rainbow_eyes)
+      robot.commands[ 'REye' ] = (set_green_eyes) 
+      robot.commands[ 'REar' ] = (half_blue_ears)
 
       robot.send()
   except KeyboardInterrupt :
