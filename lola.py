@@ -260,9 +260,9 @@ def main ():
       #robot.command( "Position" , "HeadPitch" , head_pitch)
 
 
-      robot.commands[ 'LEye' ] = (set_rainbow_eyes)
-      robot.commands[ 'REye' ] = (set_green_eyes) 
-      robot.commands[ 'REar' ] = (half_blue_ears)
+      robot.commands[ 'LEye' ] = set_rainbow_eyes()
+      robot.commands[ 'REye' ] = set_green_eyes() 
+      robot.commands[ 'REar' ] = half_blue_ears()
 
       robot.send()
   except KeyboardInterrupt :
